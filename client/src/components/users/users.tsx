@@ -12,8 +12,12 @@ export const Users: FC<Props> = ({ users }) => {
             {users.map(({ email, number }, index) => (
                 <Card key={index}>
                     <CardContent>
-                        <Typography color="text.secondary">{email}</Typography>
-                        <Typography color="text.secondary">{number}</Typography>
+                        <Typography color="text.secondary">
+                            Email: {email}
+                        </Typography>
+                        <Typography color="text.secondary">
+                            Tel: {number}
+                        </Typography>
                     </CardContent>
                 </Card>
             ))}

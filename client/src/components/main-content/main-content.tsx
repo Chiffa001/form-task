@@ -39,7 +39,7 @@ export const MainContent = () => {
                                     (error as ServerError).data
                                         .message as string[]
                                 ).map((str) => (
-                                    <ListItem>
+                                    <ListItem key={str}>
                                         <ListItemText primary={str} />
                                     </ListItem>
                                 ))}

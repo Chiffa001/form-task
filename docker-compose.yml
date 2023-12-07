@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  server:
+    container_name: form_api
+    build: ./server
+    ports:
+      - 8000:3004
+    environment:
+      - PORT=3004
+  client:
+    container_name: form_ui
+    build: 
+      context: ./client
+      args:
+        - VITE_API_BASE_URL=http://localhost:8000/api
+    ports:
+      - 3000:80

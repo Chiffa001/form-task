@@ -53,7 +53,7 @@ const axiosBaseQuery =
 export const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: axiosBaseQuery({
-        baseUrl: import.meta.env.VITE_BASE_URL,
+        baseUrl: import.meta.env.VITE_API_BASE_URL,
     }),
     endpoints: () => ({}),
 });
